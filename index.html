@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Project
+    </title>
+    <link rel="icon" href="../js assignment 3/img/js logo.png">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            margin-left: 38%;
+            text-align: center;
+            align-items: center;
+            text-decoration: underline;
+            color: rgb(72, 134, 248);
+            box-shadow: 0px 7px 7px cornflowerblue;
+            width: 180px;
+            padding: 5px;
+            border-radius: 20px;
+        }
+
+        #btn {
+            box-shadow: 0px 6px 6px gray;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(118, 159, 235);
+            color: white;
+            width: 100px;
+            height: 30px;
+            margin-left: 75%;
+        }
+        .main{
+            width: 100%;
+            box-shadow: 7px 7px 7px gray;
+            border: 2px solid rgb(226, 224, 224);
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 50px;
+            border-radius: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JS Project</h1>
+<div class="main">
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, repellat  accusamus voluptatibus cum eos aspernatur cumque. Impedit consequatur
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dolore
+            maxime possimus dolorum soluta nesciunt molestiae architecto repellat, ab tempore doloribus voluptatibus
+            amet. Ipsum beatae officia, excepturi eaque laboriosam saepe voluptate ad! Rerum similique dolores ex.
+            Laboriosam, facilis quod nisi vel laborum voluptates id minima, deleniti modi perferendis recusandae
+            sequi?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos enim blanditiis repudiandae minima eum sint magni numquam nemo voluptatem dolorum!
+    
+    </p>
+    <button id="btn" style="display: none;" onclick="showText()">Show More</button>
+    
+</div>
+
+    <script>
+        var text = document.getElementById("para").innerText
+        console.log(text);
+        if (text.length > 150) {
+            var copy = text.slice(0, 149)
+            var show = document.getElementById("para").innerText = copy
+            var btn = document.getElementById("btn").style.display = 'block'
+
+        }
+       
+        // var para1 = document.getElementById("para1").innerText
+        // console.log(para1.length);
+        // if (text.length > 40) {
+        //     var copy = text.slice(0, 150)
+        //     var show = document.getElementById("para1").innerText = copy
+        //     var btn = document.getElementById("btn1").style.display = 'block'
+        // }
+
+
+        function showText() {
+            var para = document.getElementById('para')
+            var btn = document.getElementById('btn')
+
+            if (btn.innerText === 'Show More') {
+                para.innerText = text
+                btn.innerText = 'Show less'
+            } else {
+                var copy = text.slice(0, 149)
+                para.innerText = copy
+                btn.innerText = 'Show More'
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
